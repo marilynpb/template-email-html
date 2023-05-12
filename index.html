@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Newsletter</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		/* Style General */
+        @font-face {
+            font-family: 'Helvetica';
+            src: url('./font/helvetica-neue-lt-pro-2-cufonfonts/HelveticaNeueLTProLt.otf') format('truetype');
+        }
+		@font-face {
+            font-family: 'Helvetica-bold';
+            src: url('./font/helvetica-neue-lt-pro-2-cufonfonts/HelveticaNeueLTProBd.otf') format('truetype');
+        }
+		*{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica', sans-serif;
+			font-size: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #ffffff;
+		}
+		.container{
+			max-width: 700px;
+			background-color: #ffffff;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		h1{
+            color: #ffffff;
+			line-height: 70px;
+        }
+        .section{
+            padding-left: 40px
+        }
+		button{
+			background-color: #23135F; 
+			color: #ffffff; 
+			border: none; 
+			padding: 10px 20px; 
+			font-size: 18px;
+			margin-top: 25px;
+			margin-bottom: 40px;
+			cursor: pointer;
+		}
+		b{
+			font-family: Helvetica-bold;
+		}
+		/* Header Start */
+		.header{
+			height: 500px;
+		}
+
+		.header .section{
+			height: 100%;
+			background-image: url('./img/banner.png'); 
+			background-size: 100% 100%; 
+			background-repeat: no-repeat;
+		}
+
+		.header .section img{
+			margin-top: 58px; 
+			width: 180px; 
+			height: 55px;
+		}
+
+		.header .section p{
+			background-color:#23135F; 
+			width: 110px; 
+			text-align: center; 
+			color: #ffffff; 
+			letter-spacing: 1.5px; 
+			padding: 5px 10px 5px 10px; 
+			font-size: 17px; 
+			margin-top: 164px;
+		}
+
+		.responsive-heading {
+			font-size: 3.8rem;
+			font-family: Helvetica-bold;
+			letter-spacing: 3px;
+			font-weight: bolder;
+    	}
+		/* Header End */
+
+		/* Container-calendary Start */
+		.container-calendary{
+			height: auto;
+			padding-left: 40px;
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.paragraph-calendar{
+			width: 400px; 
+			padding-top: 50px; 
+			height: 100%; 
+			padding-bottom: 40px;
+			font-size: 17px;
+			background-color: #ffffff;
+			padding-right: 35px;
+		}
+
+		.paragraph-calendar p{
+			padding-bottom: 25px;
+		}
+
+		.section-calendar{
+			background-color: #F4F4F4; 
+			width: 290px; 
+			height: auto;
+			padding: 20px;
+			padding-top: 80px;
+			text-align: center; 
+		}
+
+		.section-calendar p{
+			font-weight: bolder; 
+			font-family: Helvetica-bold;
+			font-size: 18px;
+		}
+
+		.section-calendar img{
+			width: 70px;
+		}
+		/* Container-calendary End */
+
+		/* Container-video Start */
+		.container-video{
+			width: 100%; 
+			min-height: 300px; 
+			background-color: #ffffff; 
+			background-image: url(./img/DemoasdasdHTML.png); 
+			background-repeat: no-repeat; 
+			background-size: 100%;
+			background-size: cover;
+		}
+
+		.section-video{
+			width: 350px; 
+			height: 100%;
+			float: left; 
+			padding-left: 40px;
+			padding-top: 30px; 
+			padding-bottom: 50px; 
+			display: flex;
+			align-items: center;
+		}
+
+		.container-video .div-paragraph{
+			width: 330px;
+			height: 100%; 
+			text-align: start; 
+			background-color: transparent; 
+			float: right; 
+			padding-right: 50px;
+			padding-left: 20px;
+			padding-top: 3.5rem;
+		}
+
+		.container-video .div-paragraph p{
+			margin-bottom: 25px; 
+			color: #ffffff;
+			font-size: 16px;
+		}
+
+		.container-video img{
+			width:100%;
+			height: 200px;
+		}
+		/* Container-video End */
+
+		/* Container-spacer Start */
+		.container-spacer{
+			height: auto; 
+			width: 100%;
+			background-color: #ffffff; 
+		}
+
+		.container-spacer div{
+			width: 100%; 
+			height: 100%; 
+			padding-top: 50px;
+			padding-bottom: 50px; 
+			text-align: center;
+		}
+
+		.responsive-subheading {
+        	font-size: 2rem;
+    	}
+		/* Container-spacer End */
+
+		/* Footer Start */
+		.footer{
+			padding-top: 15px;
+			background-color: #7C56B5;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.footer .section{
+			width: 50%;
+			padding-top: 30px;
+			padding-bottom: 40px; 
+		}
+
+		.section-rigth{
+			width: 50%;
+			text-align: end; 
+			padding-right: 30px;
+		}
+
+		.section-rigth p{
+			font-size: 16px; 
+			margin-right: 10px;
+		}
+
+		.section-rigth img{
+			width: 180px;
+		}
+
+		.footer p{
+			color: #ffffff;
+			font-size: 17px;
+		}
+		/* Footer End */
+
+		/* MediaQuery */
+		/* max-width:699px*/
+		@media (max-width:699px) {
+			.section{
+            	padding-left: 20px
+        	}
+			.header .section{
+				background-size: 160% 100%; 
+			}
+			.header .section img{
+				width: 140px; 
+			}
+			.responsive-heading {
+				font-size: 2.6rem!important;
+				letter-spacing:normal!important;
+    		}
+			.container-calendary{
+				padding-left: 0px!important;
+				display: block!important;
+				justify-content: center!important;
+			}
+			.paragraph-calendar{
+				width: 100%!important;
+				margin-left: auto;
+				margin-right: auto;
+				padding-left: 20px!important;
+				padding-right: 10px!important;
+			}
+			.section-calendar{
+				width: 100%!important;
+				margin-left: 0;
+				padding-left: 0%;
+				padding-bottom: 20px;
+			}
+			.container-video{
+				margin: 0%;
+				padding: 0%;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center!important;
+			}
+			.section-video{
+				justify-content: center;
+				align-content: center;
+				clear: both;
+				width: 100%; 
+				margin: 0%;
+				padding-left: 0%!important;
+				padding-bottom: 10px!important;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+			.container-video .div-paragraph{
+				clear: both;
+				width: 100%; 
+				text-align: start; 
+				padding-top: 0rem!important;
+				margin: 0%;
+				padding: 0%;
+				margin-left: auto;
+				margin-right: auto;
+				padding-bottom: 10px;
+			}
+			.container-video img{
+				width: 90%;
+				margin: 0%;
+				padding: 0%;
+				height: auto;
+				margin-left: auto!important;
+				margin-right: auto!important;
+				text-align: center;
+			}
+			.responsive-subheading {
+				font-size: 1.1rem!important;
+			}
+			.footer{
+				display: block!important;
+				justify-content: center!important;
+				text-align: center!important;
+			}
+			.footer .section{
+				width: 100%!important; 
+				text-align: center; 
+				padding-bottom: 0%;
+				margin: 0!important;
+				padding: 0px!important;
+			}
+			.section-rigth{
+				width: 100%!important;
+				text-align: center!important;; 
+				padding-bottom: 30px;
+				margin: 0!important;
+			}
+			.section-rigth p{
+				margin-right: 0px!important;;
+			}
+		}
+	</style>
+</head>
+<body>
+	<table class="container">
+		<tr>
+			<td class="header">
+				<div class="section">
+					<img src="./img/logo-generic.png">
+                    <p>LUNCH</p>
+                    <h1 class="responsive-heading">
+                        Lorem ipsum
+                    </h1>
+					<h1 class="responsive-heading">
+                        dolor sit amet
+                    </h1>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td  class="content container-calendary">
+				<div class="paragraph-calendar">
+					<p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit,</b>
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							<b>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</b></p>
+				</div>
+
+				<div class="section-calendar">
+					<img src="./img/calendar.png">
+					<p>March 3th | 12:00 PM</p>
+					<p>TBD</p>
+					<button>Confirm attendance</button>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="content container-video">
+				<div class="section-video">
+					<img src="./img/DemoasHTMLas.png">
+				</div>
+				<div class="div-paragraph">
+					<p>
+						<b>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit,
+						</b> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+					<p>
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+					</p>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="content container-spacer">
+				<div>
+					<h2 class="responsive-subheading" style="font-weight: lighter;">Speaker: 
+						<b style="color: #23135F;">
+						Lorem Ipsum
+						</b> 
+						<span style="color: #23135F; font-weight: lighter;">- Dolor sit amet</span>
+					</h2>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="footer">
+				<div class="section">
+					<p style="text-transform: uppercase; margin-bottom: 8px;">More information:</p>
+					<p style="margin-bottom: 5px;"><b>Lorem Ipsum</b> | Vice President</p>
+					<p style="color: #23135F;font-family: Helvetica-bold; margin-bottom: 5px;">consectetur@loremipsum.com</p>
+				</div>
+				<div class="section-rigth">
+					<img src="./img/logoFooterr.png" alt="Logo">
+					<p>Generic 2020.</p>
+					<p>All rights reserved.</p>
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
